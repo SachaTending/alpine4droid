@@ -60,14 +60,14 @@ set_pass () {
     run_in_chroot $1 /usr/bin/passwd
 }
 
-log Alpine4droid installer ver 1.1
+log Alpine4droid installer ver 1.1.1(hotfix)
 log Preparing...
 mkdir tmp 2> /dev/null
 rm tmp/target.tar.gz 2> /dev/null
 log Getting target arch...
 
 #arch=$(uname -m)
-export arch=armv8l
+export arch=$(uname -m)
 
 case $arch in
   x86_64|amd64)
